@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/Markdown.js"></script>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Lemur</title>
+</head>
+
+<body>
+    <main id="wrapper">
+        <div id="styles">
+            <h1>Styles</h1>
+            <hr>
+            <form id="input">
+                <details id="h1" open>
+                    <summary>Header 1</summary>
+
+                    <label for="color">Color</label>
+                    <input type="color" id="color" name="color" value="#000000">
+                    <br>
+                    <label for="backgroundColor">Back color</label>
+                    <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff">
+                    <br>
+                    <label for="fontSize">Size</label>
+                    <input type="number" id="fontSize" name="fontSize">
+                    <br>
+                    <label for="fontFamily">Font</label>
+                    <input type="text" id="fontFamily" name="fontFamily">
+                    <br>
+                    <label for="fontWeight">Bold</label>
+                    <input type="number" id="fontWeight" name="fontWeight">
+                    <br>
+                    <label for="fontStyle">Italic</label>
+                    <input type="text" id="fontStyle" name="fontStyle">
+                    <br>
+                    <label for="textDecoration">Decoration</label>
+                    <input type="text" id="textDecoration" name="textDecoration">
+                    <br>
+                    <fieldset>
+                        <legend>Alignement</legend>
+                        <div>
+                            <input type="radio" id="left" name="textAlign" value="left" checked>
+                            <label for="left">Left</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="center" name="textAlign" value="center">
+                            <label for="center">Center</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="right" name="textAlign" value="right">
+                            <label for="right">Right</label>
+                        </div>
+                    </fieldset>
+                </details>
+                <hr>
+            </form>
+        </div>
+        <div id="md">
+            <textarea name="input" id="input"># Title
+## Subtitle
+ **bold text**
+* list
+* of
+* elements</textarea>
+        </div>
+        <div id="result">
+            <div id="output"></div>
+        </div>
+    </main>
+    <style id="change"></style>
+</body>
+
+</html>
