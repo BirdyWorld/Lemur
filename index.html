@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/Markdown.js"></script>
+    <script src="scripts/Style.js"></script>
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Lemur</title>
@@ -18,44 +19,80 @@
             <hr>
             <form id="input">
                 <details id="h1" open>
-                    <summary>Header 1</summary>
-
-                    <label for="color">Color</label>
-                    <input type="color" id="color" name="color" value="#000000">
-                    <br>
-                    <label for="backgroundColor">Back color</label>
-                    <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff">
-                    <br>
-                    <label for="fontSize">Size</label>
-                    <input type="number" id="fontSize" name="fontSize">
-                    <br>
-                    <label for="fontFamily">Font</label>
-                    <input type="text" id="fontFamily" name="fontFamily">
-                    <br>
-                    <label for="fontWeight">Bold</label>
-                    <input type="number" id="fontWeight" name="fontWeight">
-                    <br>
-                    <label for="fontStyle">Italic</label>
-                    <input type="text" id="fontStyle" name="fontStyle">
-                    <br>
-                    <label for="textDecoration">Decoration</label>
-                    <input type="text" id="textDecoration" name="textDecoration">
-                    <br>
-                    <fieldset>
-                        <legend>Alignement</legend>
-                        <div>
-                            <input type="radio" id="left" name="textAlign" value="left" checked>
-                            <label for="left">Left</label>
+                    <summary>
+                        <div class="preview">
+                            <h1>Header 1</h1>
                         </div>
-                        <div>
-                            <input type="radio" id="center" name="textAlign" value="center">
-                            <label for="center">Center</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="right" name="textAlign" value="right">
-                            <label for="right">Right</label>
-                        </div>
-                    </fieldset>
+                    </summary>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Color</th>
+                                <td>
+                                    <input form="input" type="color" name="h1_color" value="#000000">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Backcolor</th>
+                                <td>
+                                    <input form="input" type="color" name="h1_backgroundColor" value="#ffffff">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Size</th>
+                                <td>
+                                    <input form="input" type="text" name="h1_fontSize" value="20pt">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Font</th>
+                                <td>
+                                    <input form="input" type="text" name="h1_fontFamily" value="serif">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Bold</th>
+                                <td>
+                                    <input form="input" type="number" name="h1_fontWeight" min="100" value="700"
+                                        max="1000" step="100">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Italic</th>
+                                <td>
+                                    <input form="input" type="text" name="h1_fontStyle" value="normal">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Decoration</th>
+                                <td>
+                                    <input form="input" type="text" name="h1_textDecoration" value="none">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Alignement</legend>
+                                        <div>
+                                            <input form="input" type="radio" id="left" name="h1_textAlign" value="left"
+                                                checked>
+                                            <label for="left">Left</label>
+                                        </div>
+                                        <div>
+                                            <input form="input" type="radio" id="center" name="h1_textAlign"
+                                                value="center">
+                                            <label for="center">Center</label>
+                                        </div>
+                                        <div>
+                                            <input form="input" type="radio" id="right" name="h1_textAlign"
+                                                value="right">
+                                            <label for="right">Right</label>
+                                        </div>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </details>
                 <hr>
             </form>
@@ -70,9 +107,9 @@
         </div>
         <div id="result">
             <div id="output"></div>
+            <style></style>
         </div>
     </main>
-    <style id="change"></style>
 </body>
 
 </html>
