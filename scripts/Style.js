@@ -15,6 +15,6 @@ class Style
         return this.css;
     }
     toCSSProperty (jcssProperty) {
-        return jcssProperty.replace(/([A-Z])/, "-$1");
+        return jcssProperty.replace(/([A-Z])/g, "-$1");
     }
 }

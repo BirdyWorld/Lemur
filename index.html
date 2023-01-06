@@ -41,7 +41,32 @@
                             <tr>
                                 <th>Size</th>
                                 <td>
-                                    <input form="input" type="text" name="h1_fontSize" value="20pt">
+                                    <input style="display: none;" form="input" type="text" name="h1_fontSize"
+                                        value="2em">
+                                    <input type="number" style="width: 80%; display: inline-block;" min="0" value="2"
+                                        max="500"
+                                        oninput="document.getElementsByName('h1_fontSize')[0].value = document.getElementById('h1_fontSize_number').value + document.getElementById('h1_fontSize_unit').value;"
+                                        id="h1_fontSize_number">
+                                    <select style="width: 20%; padding: 0; display: inline-block;"
+                                        oninput="document.getElementsByName('h1_fontSize')[0].value = document.getElementById('h1_fontSize_number').value + document.getElementById('h1_fontSize_unit').value;"
+                                        id="h1_fontSize_unit">
+                                        <option value="%">%</option>
+                                        <option value="ch">ch</option>
+                                        <option value="cm">cm</option>
+                                        <option value="em" selected>em</option>
+                                        <option value="ex">ex</option>
+                                        <option value="fr">fr</option>
+                                        <option value="in">in</option>
+                                        <option value="mm">mm</option>
+                                        <option value="pc">pc</option>
+                                        <option value="pt">pt</option>
+                                        <option value="px">px</option>
+                                        <option value="rem">rem</option>
+                                        <option value="vh">vh</option>
+                                        <option value="vmax">vmax</option>
+                                        <option value="vmin">vmin</option>
+                                        <option value="vw">vw</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
@@ -53,20 +78,43 @@
                             <tr>
                                 <th>Bold</th>
                                 <td>
-                                    <input form="input" type="number" name="h1_fontWeight" min="100" value="700"
-                                        max="1000" step="100">
+                                    <select form="input" name="h1_fontWeight">
+                                        <option value="100">100</option>
+                                        <option value="200">200</option>
+                                        <option value="300">300</option>
+                                        <option value="400">normal</option>
+                                        <option value="500">500</option>
+                                        <option value="600">600</option>
+                                        <option value="700" selected>bold</option>
+                                        <option value="800">800</option>
+                                        <option value="900">900</option>
+                                        <option value="lighter">lighter</option>
+                                        <option value="bolder">bolder</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Italic</th>
                                 <td>
-                                    <input form="input" type="text" name="h1_fontStyle" value="normal">
+                                    <select form="input" name="h1_fontStyle">
+                                        <option value="normal" selected>normal</option>
+                                        <option value="italic">italic</option>
+                                        <option value="oblique">oblique</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Decoration</th>
                                 <td>
-                                    <input form="input" type="text" name="h1_textDecoration" value="none">
+                                    <input form="input" type="text" name="h1_textDecorationLine" value="none">
+                                    <input form="input" type="color" name="h1_textDecorationColor" value="#000000">
+                                    <select form="input" name="h1_textDecorationStyle">
+                                        <option value="solid" selected>solid</option>
+                                        <option value="double">double</option>
+                                        <option value="dotted">dotted</option>
+                                        <option value="dashed">dashed</option>
+                                        <option value="wavy">wavy</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
@@ -75,17 +123,17 @@
                                         <legend>Alignement</legend>
                                         <div>
                                             <input form="input" type="radio" id="left" name="h1_textAlign" value="left"
-                                                checked>
+                                                style="width: auto;" checked>
                                             <label for="left">Left</label>
                                         </div>
                                         <div>
                                             <input form="input" type="radio" id="center" name="h1_textAlign"
-                                                value="center">
+                                                value="center" style="width: auto;">
                                             <label for="center">Center</label>
                                         </div>
                                         <div>
                                             <input form="input" type="radio" id="right" name="h1_textAlign"
-                                                value="right">
+                                                value="right" style="width: auto;">
                                             <label for="right">Right</label>
                                         </div>
                                     </fieldset>
